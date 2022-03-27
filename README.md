@@ -6,6 +6,8 @@
 
 作者自用，会持续维护的，**喜欢的话，点个Star吧！**
 
+**请尊重开源软件作者及其版权！！！本项目不欢迎不尊重版权的用户使用！！！**
+
 ## 后台截图：
 
 ![image](https://user-images.githubusercontent.com/40296672/158090393-d6bca24d-8df0-4947-b7d4-27fbd3bcab75.png)
