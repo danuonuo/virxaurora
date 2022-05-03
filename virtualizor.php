@@ -243,7 +243,7 @@ function virtualizor_CreateAuroraAccount($params){
     curl_setopt($ch, CURLOPT_URL, $aurora_pf_panel_address.'/api/v1/users');
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
     curl_setopt($ch, CURLOPT_POST, 1);
-    curl_setopt($ch, CURLOPT_POSTFIELDS, "{\n  \"email\": \"$aurora_pf_account_name\",\n  \"is_active\": true,\n  \"is_ops\": false,\n  \"is_superuser\": false,\n  \"first_name\": \"$clientEmail\",\n  \"last_name\": \"vmUser\",\n  \"password\": \"$clientEmail\",\n  \"notes\": \"vmUser\"\n}");
+    curl_setopt($ch, CURLOPT_POSTFIELDS, "{\n  \"email\": \"$aurora_pf_account_name\",\n  \"is_active\": true,\n  \"is_ops\": false,\n  \"is_superuser\": false,\n  \"first_name\": \"$clientEmail\",\n  \"last_name\": \"vmUser\",\n  \"password\": \"hellovmuser\",\n  \"notes\": \"vmUser\"\n}");
 
     $headers = array();
     $headers[] = 'Accept: application/json';
@@ -2293,9 +2293,9 @@ function virtualizor_portforwardpanel($params) {
     $clientEmail = $params['clientsdetails']['email'];
     
     $aurora_pf_account_name='serviceid'.$params['serviceid'].'email'.$clientEmail;
-    $redirect_url = $aurora_pf_panel_address;
+    
     echo "<script language=\"JavaScript\">\r\n";
-    echo " alert(\"账号：".$aurora_pf_account_name."，初始密码为您的邮箱。\\n点击确定即跳转\");\r\n";
+    echo " alert(\"账号：".$aurora_pf_account_name."，初始密码为 hellovmuser 。\\n点击确定即跳转\");\r\n";
     echo " location.replace(\"".$aurora_pf_panel_address."\");\r\n"; // 自己修改网址
     echo "</script>";
     #echo "<script>alert('账号为您注册本站的邮箱:，初始密码为您的邮箱。<br/>点击确定即跳转')";
